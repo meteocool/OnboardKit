@@ -133,7 +133,13 @@ extension OnboardViewController: OnboardPageViewControllerDelegate {
       pageAction({ (success, error) in
         guard error == nil else { return }
         if success {
-          self.advanceToPageWithIndex(index + 1)
+          if index == self.pageItems.count - 1 {
+            DispatchQueue.main.async { [weak self] in
+                self?.dismiss(animated: true, completion: self?.completion)
+            }
+          } else {
+            self.advanceToPageWithIndex(index + 1)
+          }
         }
       })
     }
