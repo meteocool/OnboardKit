@@ -20,7 +20,7 @@ public struct OnboardPage {
   /// An optional description text to be used underneath the image
   ///
   /// - note: If no description text is used, the image will adjust fill the empty space
-  let description: String?
+  public var description: String?
 
   /// The title text to be used for the secondary button that is used to advance to the next page
   let advanceButtonTitle: String
