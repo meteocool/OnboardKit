@@ -124,7 +124,7 @@ internal final class OnboardPageViewController: UIViewController {
     NSLayoutConstraint.activate([
       titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16.0),
-      pageStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16.0),
+      pageStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: -16.0),
       pageStackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
       pageStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
       pageStackView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor)
@@ -166,7 +166,7 @@ internal final class OnboardPageViewController: UIViewController {
   private func configureImageView(_ imageName: String?) {
     if let imageName = imageName, let image = UIImage(named: imageName) {
       imageView.image = image
-      imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.8).isActive = true
+      imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.5).isActive = true
     } else {
       imageView.isHidden = true
     }
