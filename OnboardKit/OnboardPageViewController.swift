@@ -124,7 +124,7 @@ internal final class OnboardPageViewController: UIViewController {
     NSLayoutConstraint.activate([
       titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
       titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16.0),
-      imageView.heightAnchor.constraint(equalToConstant: view.frame.height*0.3)
+      imageView.heightAnchor.constraint(equalToConstant: view.frame.height*0.3),
       pageStackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16.0),
       pageStackView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
       pageStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
