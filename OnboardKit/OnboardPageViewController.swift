@@ -167,7 +167,7 @@ internal final class OnboardPageViewController: UIViewController {
     if let imageName = imageName, let image = UIImage(named: imageName) {
       imageView.image = image
         
-        print(pageStackView.frame.width)
+        print(pageStackView.widthAnchor)
       
         if view.frame.size.height < 700 {
             NSLayoutConstraint.activate([
