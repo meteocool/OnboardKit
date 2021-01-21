@@ -174,7 +174,7 @@ internal final class OnboardPageViewController: UIViewController {
         }
         else{
             NSLayoutConstraint.activate([
-              imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.5)
+              imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.4)
               ])
         }
     
