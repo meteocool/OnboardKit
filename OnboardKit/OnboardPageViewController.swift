@@ -166,9 +166,19 @@ internal final class OnboardPageViewController: UIViewController {
   private func configureImageView(_ imageName: String?) {
     if let imageName = imageName, let image = UIImage(named: imageName) {
       imageView.image = image
-      NSLayoutConstraint.activate([
-        imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.3)
-        ])
+      
+        if view.frame.size.height < 700 {
+            NSLayoutConstraint.activate([
+              imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.3)
+              ])
+        }
+        else{
+            NSLayoutConstraint.activate([
+              imageView.heightAnchor.constraint(equalTo: pageStackView.heightAnchor, multiplier: 0.5)
+              ])
+        }
+    
+      
     } else {
       imageView.isHidden = true
     }
