@@ -34,7 +34,10 @@ public struct OnboardPage {
   ///
   /// - note: calling the completion on the action will advance the onboarding to the next page
   let action: OnboardPageAction?
-    
+
+  /// The `contentMode` used for the slide imageView
+  ///
+  /// - note: 
   let imageContentMode: UIView.ContentMode
 
   public init(title: String,
