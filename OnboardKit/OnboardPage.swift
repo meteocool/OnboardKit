@@ -4,6 +4,7 @@
 //
 
 import Foundation
+import UIKit
 
 public typealias OnboardPageCompletion = ((_ success: Bool, _ error: Error?) -> Void)
 public typealias OnboardPageAction = (@escaping OnboardPageCompletion) -> Void
