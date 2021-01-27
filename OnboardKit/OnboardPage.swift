@@ -34,18 +34,22 @@ public struct OnboardPage {
   ///
   /// - note: calling the completion on the action will advance the onboarding to the next page
   let action: OnboardPageAction?
+    
+  let imageContentMode: UIView.ContentMode
 
   public init(title: String,
               imageName: String? = nil,
               description: String?,
               advanceButtonTitle: String = NSLocalizedString("Next", comment: ""),
               actionButtonTitle: String? = nil,
-              action: OnboardPageAction? = nil) {
+              action: OnboardPageAction? = nil,
+              imageContentMode: UIView.ContentMode) {
     self.title = title
     self.imageName = imageName
     self.description = description
     self.advanceButtonTitle = advanceButtonTitle
     self.actionButtonTitle = actionButtonTitle
     self.action = action
+    self.imageContentMode = imageContentMode
   }
 }

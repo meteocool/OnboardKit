@@ -154,6 +154,13 @@ internal final class OnboardPageViewController: UIViewController {
     configureDescriptionLabel(page.description)
     configureActionButton(page.actionButtonTitle, action: page.action)
     configureAdvanceButton(page.advanceButtonTitle)
+    configureImageContetMode(page.imageContentMode)
+  }
+    
+  private func configureImageContetMode(_ imageContentMode: UIView.ContentMode?){
+    if let imageContentMode = imageContentMode {
+      imageView.contentMode = imageContentMode
+    }
   }
 
   private func configureTitleLabel(_ title: String) {
