@@ -39,7 +39,7 @@ public struct OnboardPage {
   /// The `contentMode` used for the slide imageView
   ///
   /// - note: Changes the contentMode of the imageView of this page.
-  let imageContentMode: UIView.ContentMode
+  let imageContentMode: UIView.ContentMode?
 
   public init(title: String,
               imageName: String? = nil,
@@ -47,7 +47,7 @@ public struct OnboardPage {
               advanceButtonTitle: String = NSLocalizedString("Next", comment: ""),
               actionButtonTitle: String? = nil,
               action: OnboardPageAction? = nil,
-              imageContentMode: UIView.ContentMode) {
+              imageContentMode: UIView.ContentMode? = nil) {
     self.title = title
     self.imageName = imageName
     self.description = description
