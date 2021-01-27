@@ -38,7 +38,7 @@ public struct OnboardPage {
 
   /// The `contentMode` used for the slide imageView
   ///
-  /// - note: Changes the contentMode of the imageView of this page
+  /// - note: Changes the contentMode of the imageView of this page.
   let imageContentMode: UIView.ContentMode
 
   public init(title: String,
